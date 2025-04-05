@@ -1,4 +1,4 @@
-# Top免费VPN推荐 | 4月2日19.1M/S|免费Shadowrocket/Clash/V2ray/SSR订阅节点地址  更新时间 2025-04-02 07:54:54
+# Top免费VPN推荐 | 4月5日18.9M/S|免费Clash/Shadowrocket/V2ray/SSR订阅节点地址  更新时间 2025-04-05 08:42:45
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://vpnbest.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### Clash订阅链接
 
-- https://vpnbest.github.io/uploads/2025/04/0-20250402.yaml
-- https://vpnbest.github.io/uploads/2025/04/1-20250402.yaml
-- https://vpnbest.github.io/uploads/2025/04/2-20250402.yaml
-- https://vpnbest.github.io/uploads/2025/04/3-20250402.yaml
-- https://vpnbest.github.io/uploads/2025/04/4-20250402.yaml
+- https://vpnbest.github.io/uploads/2025/04/0-20250405.yaml
+- https://vpnbest.github.io/uploads/2025/04/1-20250405.yaml
+- https://vpnbest.github.io/uploads/2025/04/2-20250405.yaml
+- https://vpnbest.github.io/uploads/2025/04/3-20250405.yaml
+- https://vpnbest.github.io/uploads/2025/04/4-20250405.yaml
 
 ### V2ray订阅链接
 
-- https://vpnbest.github.io/uploads/2025/04/0-20250402.txt
-- https://vpnbest.github.io/uploads/2025/04/1-20250402.txt
-- https://vpnbest.github.io/uploads/2025/04/2-20250402.txt
-- https://vpnbest.github.io/uploads/2025/04/3-20250402.txt
-- https://vpnbest.github.io/uploads/2025/04/4-20250402.txt
+- https://vpnbest.github.io/uploads/2025/04/0-20250405.txt
+- https://vpnbest.github.io/uploads/2025/04/1-20250405.txt
+- https://vpnbest.github.io/uploads/2025/04/2-20250405.txt
+- https://vpnbest.github.io/uploads/2025/04/3-20250405.txt
+- https://vpnbest.github.io/uploads/2025/04/4-20250405.txt
 
 ### Sing-box订阅链接
 
-- https://vpnbest.github.io/uploads/2025/04/20250402.json
+- https://vpnbest.github.io/uploads/2025/04/20250405.json
 
 ## 更多clash节点订阅 ：
 

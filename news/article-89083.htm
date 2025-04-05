@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnbest.github.io/news/article-89083.htm" />
+    <title>正则表达式 \b \B，单词边界的匹配</title>
+        <meta name="description" content="文章目录  1 \b \B 代表的含义 2 用法示例   2.1 简单示例   2.1.1 示例1 2.1.2 示例2 2.1.3 示例3 2.1.4 示例4   2.2 复杂示例   2.2.1 示" />
+        <link rel="icon" href="/assets/website/img/v2ray_node/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Top免费VPN推荐 节点订阅中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnbest.github.io/news/article-89083.htm" />
+    <meta property="og:site_name" content="Top免费VPN推荐 节点订阅中文网" />
+    <meta property="og:title" content="正则表达式 \b \B，单词边界的匹配" />
+    <meta property="og:image" content="https://vpnbest.github.io/uploads/20240810/576e2849d154a2569f03a0e1904fcf9e.webp" />
+        <meta property="og:release_date" content="2025-04-05T08:19:51" />
+    <meta property="og:updated_time" content="2025-04-05T08:19:51" />
+        <meta property="og:description" content="文章目录  1 \b \B 代表的含义 2 用法示例   2.1 简单示例   2.1.1 示例1 2.1.2 示例2 2.1.3 示例3 2.1.4 示例4   2.2 复杂示例   2.2.1 示" />
+        
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="正则表达式 \b \B，单词边界的匹配">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/fonts/v2ray_node/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/assets/website/fonts/v2ray_node/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/aos.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6YFENCY5CN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6YFENCY5CN');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-page="detail">
+    <div class="site-wrap">
+            
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6 col-md-3">
+                        <a href="/" class="h2 mb-0">
+                                                <span class="mb-0 site-logo"><span>Top免费VPN推荐</span></span>
+                                                </a>
+                    </div>
+                    <div class="col-12 col-md-9 d-none d-xl-block">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                                                                <li><a href="/" class="nav-link">首页</a></li>
+                                                                <li><a href="/free-nodes/" class="nav-link">免费节点</a></li>
+                                                                <li><a href="/paid-subscribe/" class="nav-link">推荐机场</a></li>
+                                                                <li><a href="/news/" class="nav-link">新闻资讯</a></li>
+                                                                <li><a href="/client.htm" class="nav-link">客户端</a></li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+                </div>
+            </div>
+        </header>
+        <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(/assets/website/img/v2ray_node/hero_1.jpg);" data-aos="fade" id="home-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mt-lg-5 mr-auto text-left align-self-end align-self-md-center">
+                        <h1>正则表达式 \b \B，单词边界的匹配</h1>
+                        <p><a href="/">首页</a> <span class="mx-3">&bullet;</span> <a href="/news/">新闻资讯</a> <span class="mx-3">&bullet;</span> 正文</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="site-section" id="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <div class="toc"> <h3>文章目录</h3> <ul> <li><a href="#1_b_B__4" rel="nofollow">1 \b \B 代表的含义</a></li> <li><a href="#2__65" rel="nofollow">2 用法示例</a></li> <li> <ul> <li><a href="#21__71" rel="nofollow">2.1 简单示例</a></li> <li> <ul> <li><a href="#211_1_72" rel="nofollow">2.1.1 示例1</a></li> <li><a href="#212_2_77" rel="nofollow">2.1.2 示例2</a></li> <li><a href="#213_3_82" rel="nofollow">2.1.3 示例3</a></li> <li><a href="#214_4_88" rel="nofollow">2.1.4 示例4</a></li> </ul> </li> <li><a href="#22__94" rel="nofollow">2.2 复杂示例</a></li> <li> <ul> <li><a href="#221_5_96" rel="nofollow">2.2.1 示例5</a></li> <li><a href="#222_6_102" rel="nofollow">2.2.2 示例6</a></li> </ul> </li> </ul> </li> </ul> </div> <blockquote> <p>在使用正则表达式的时候，会遇到需要精准匹配某些字符的情况，这时候 \b \B 就派上用场了。若是不理解这两个正则表达式元字符，用起来便不会得心应手。本文介绍如何使用它们。</p> </blockquote> </h1> <table> <thead> <tr> <th align="left">元字符</th> <th align="left">含义</th> </tr> </thead> <tbody> <tr> <td align="left">\b</td> <td align="left">匹配一个单词边界</td> </tr> <tr> <td align="left">\B</td> <td align="left">匹配一个非单词边界</td> </tr> <tr> <td align="left">\w</td> <td align="left">匹配一个字母、数字或下划线。等价于 [A-Za-z0-9_]</td> </tr> </tbody> </table> <p>这两个元字符的含义看起来非常官方，但却又非常准确。理解之后就会发现它们概括的言简意赅，一点废话都没有，但却需要细细品味。</p> <p>要想理解这两个元字符，需要明确两个概念：</p> <ol> <li>单词：说到单词，又涉及到一个元字符<code>\w</code>，如上表所述，<code>\w表示一个字母数字或下划线</code>。<strong>而单词，正是由若干\w组成的，也就是任意字母数字的组合。</strong> </li> <li>边界：在正则表达式里面，边界不是特定的字符，而是一个不存在的东西，一个概念。可以说是\b \B代表的东西，<strong>边界是任何两个字符之间的那个东西</strong>。</li> </ol> <p>明确这两个概念之后，下面就可以说明 \b \B 代表的含义了。</p> <ul> <li>\b 单词边界：匹配一个边界，<strong>一边字符是\w，一边字符不是\w</strong> </li> <li>\B 非单词边界：匹配除 \b 之外的边界。<strong>两边字符都是\w，或两边字符都不是\w</strong> </li> </ul> <p>这里先下一个定义，用正则表达式的语言表达：</p> <ul> <li>字符是\w：<code>\w</code> </li> <li>字符不是\w：<code>[^\w]</code> </li> </ul> <p>如下图所示，图中所有虚竖线都是边界。<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230207/154b8ee3af515ae33ca552ea2e7896ad.jpg" alt="正则表达式 \b \B，单词边界的匹配"><br /> 上图中，每个边界都满足：一边是<code>\w</code>，一边是<code>[^\w]</code>。即：</p> <ul> <li>左边是<code>\w</code>，右边是<code>[^\w]</code> </li> <li>左边是<code>[^\w]</code>，右边是<code>\w</code> </li> </ul> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230207/8b5f995208dd9441c8495f73cd662837.jpg" alt="正则表达式 \b \B，单词边界的匹配"><br /> \B 就是除 \b 之外的所有边界。\b表示一边是<code>\w</code>，一边是<code>[^\w]</code>的边界，那么取反，即：</p> <ul> <li>两边都是<code>\w</code> </li> <li>两边都是<code>[^\w]</code> </li> </ul> <p>简言之：</p> <table> <thead> <tr> <th>边界类型</th> <th>左侧字符</th> <th align="left">右侧字符</th> </tr> </thead> <tbody> <tr> <td>\b</td> <td><code>\w</code></td> <td align="left"><code>[^\w]</code></td> </tr> <tr> <td>\b</td> <td><code>[^\w]</code></td> <td align="left"><code>\w</code></td> </tr> <tr> <td>\B</td> <td><code>\w</code></td> <td align="left"><code>\w</code></td> </tr> <tr> <td>\B</td> <td><code>[^\w]</code></td> <td align="left"><code>[^\w]</code></td> </tr> </tbody> </table> <p>用字符是 <code>\w</code> 代表 1，字符是<code>[^\w]</code>代表 0，那么用计算机的逻辑思维理解就是：</p> <table> <thead> <tr> <th>边界类型</th> <th>左侧字符</th> <th align="left">右侧字符</th> </tr> </thead> <tbody> <tr> <td>\b</td> <td><code>1</code></td> <td align="left"><code>0</code></td> </tr> <tr> <td>\b</td> <td><code>0</code></td> <td align="left"><code>1</code></td> </tr> <tr> <td>\B</td> <td><code>1</code></td> <td align="left"><code>1</code></td> </tr> <tr> <td>\B</td> <td><code>0</code></td> <td align="left"><code>0</code></td> </tr> </tbody> </table> <p>两个二进制数的表示也就这四种情况。因此，可得到如下结论：</p> <ul> <li>\b 代表的边界，左右字符类型不相同</li> <li>\B 代表的边界，左右字符类型相同</li> </ul> <p>注意：这里指的字符类型只包括两种（是<code>\w</code> 、不是<code>\w</code>）。<mark>其它都可以忘掉，只要记住这两个结论就可以了</mark>。</p> <p>看到这，应该能从上面的图表中理解什么是单词边界<code>\b</code>，什么是非单词边界<code>\B</code>了。</p> </h1> <p>这里根据第1节得出的结论：</p> <ul> <li>\b 代表的边界，左右字符类型不相同</li> <li>\B 代表的边界，左右字符类型相同</li> </ul> <p>结合几个示例进行分析。</p> <h2> <a id="21__71" rel="nofollow"></a>2.1 简单示例</h2> <h3> <a id="211_1_72" rel="nofollow"></a>2.1.1 示例1</h3> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230207/cbe74d8c92716e62e131fa6ee4e4d2d0.jpg" alt="正则表达式 \b \B，单词边界的匹配"><br /> 对于模式<code>\bat\b</code>中的第一个\b，由于其右侧是<code>\w</code>，那么其左侧必须是<code>[^\w]</code>；<br /> 对于模式<code>\bat\b</code>中的第二个\b，由于其左侧是<code>\w</code>，那么其右侧必须是<code>[^\w]</code>；<br /> 因此匹配结果如图所示。</p> <h3> <a id="212_2_77" rel="nofollow"></a>2.1.2 示例2</h3> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230207/d416735198dc37153739662cf6bb5d86.jpg" alt="正则表达式 \b \B，单词边界的匹配"><br /> 对于模式<code>\Bat\b</code>中的\B，由于其右侧是<code>\w</code>，那么其左侧也必须是<code>\w</code>；<br /> 对于模式<code>\Bat\b</code>中的\b，由于其左侧是<code>\w</code>，那么其右侧必须是<code>[^\w]</code>；<br /> 因此匹配结果如图所示。</p> <h3> <a id="213_3_82" rel="nofollow"></a>2.1.3 示例3</h3> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230207/4262396382feb62f72a9eb5df6c7ac6a.jpg" alt="正则表达式 \b \B，单词边界的匹配"><br /> 对于模式<code>\Bat\B</code>中的第一个\B，由于其右侧是<code>\w</code>，那么其左侧也必须是<code>\w</code>；<br /> 对于模式<code>\Bat\B</code>中的第二个\B，由于其左侧是<code>\w</code>，那么其右侧也必须是<code>\w</code>；<br /> 因此匹配结果如图所示。</p> <h3> <a id="214_4_88" rel="nofollow"></a>2.1.4 示例4</h3> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230207/a4ec71d6d0ecfe102cd531a3657c1a82.jpg" alt="正则表达式 \b \B，单词边界的匹配"><br /> 对于模式<code>\bat\B</code>中的\b，由于其右侧是<code>\w</code>，那么其左侧必须是<code>[^\w]</code>；<br /> 对于模式<code>\bat\B</code>中的\B，由于其左侧是<code>\w</code>，那么其右侧也必须是<code>\w</code>；<br /> 因此匹配结果如图所示。</p> <h2> <a id="22__94" rel="nofollow"></a>2.2 复杂示例</h2> <p>能看懂上面的简单示例的话，理解下面的就不难了。</p> <h3> <a id="221_5_96" rel="nofollow"></a>2.2.1 示例5</h3> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230207/cb30d01670e0c62ed08c2a7c20cc2ef8.jpg" alt="正则表达式 \b \B，单词边界的匹配"><br /> 由于<code>%</code>是<code>[^\w]</code>，因此匹配结果两侧的字符也应该是<code>[^\w]</code></p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230207/96c499201a9cdf3faa3aabb249747000.jpg" alt="正则表达式 \b \B，单词边界的匹配"><br /> 这个不用说应该就能懂了。</p> <h3> <a id="222_6_102" rel="nofollow"></a>2.2.2 示例6</h3> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230207/31571fee397c1ec7ab6382e0487b6a70.jpg" alt="正则表达式 \b \B，单词边界的匹配"><br /> 根据两个\B，目标的 thank 左右两侧应该都是<code>\w</code></p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230207/1a20ffe030d810559983ad038ff54d4b.jpg" alt="正则表达式 \b \B，单词边界的匹配"><br /> 根据\b，<code>r</code>左侧应该是<code>[^\w]</code>；根据\B，<code>=</code>右侧应该是<code>[^\w]</code></p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230207/ec4cf583ab6612716a6aa6f9b8301170.jpg" alt="正则表达式 \b \B，单词边界的匹配"><br /> 由于<code>r</code>是<code>\w</code>，根据\b，<code>r</code>左侧应该是<code>[^\w]</code>；<br /> 由于<code>=</code>是<code>[^\w]</code>，根据\b，<code>=</code>右侧应该是<code>\w</code>；<br /> 字符串中两个<code>regex==</code>均不满足左侧是<code>[^\w]</code>，右侧是<code>\w</code>，因此匹配失败。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230207/e364d2211c18ed696119095533148191.jpg" alt="正则表达式 \b \B，单词边界的匹配"><br /> 字符串中第二个<code>regex==</code>满足左侧是<code>\w</code>，右侧是<code>\w</code>，因此匹配成功。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-88370.htm">python 查看包的版本</a></p>
+                                        <p>下一个：<a href="/news/article-89084.htm">谈谈高并发系统的一些解决方案</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-86246.htm" title="动物医院英文短语怎么写的 动物医院英文短语怎么写的啊">动物医院英文短语怎么写的 动物医院英文短语怎么写的啊</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-28-free-high-speed-nodes.htm" title="Top免费VPN推荐 | 3月28日22.6M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点地址">Top免费VPN推荐 | 3月28日22.6M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-5-node-share.htm" title="Top免费VPN推荐 | 4月5日20.6M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点地址">Top免费VPN推荐 | 4月5日20.6M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点地址</a></li>
+                        <li class="py-2"><a href="/news/article-82682.htm" title="重庆宠物领养平台电话号码查询地址（重庆宠物领养平台电话号码查询地址）">重庆宠物领养平台电话号码查询地址（重庆宠物领养平台电话号码查询地址）</a></li>
+                        <li class="py-2"><a href="/news/article-85539.htm" title="动物医院的英文单词怎么写的 动物医院的英文单词怎么写的呀">动物医院的英文单词怎么写的 动物医院的英文单词怎么写的呀</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-31-node-share.htm" title="Top免费VPN推荐 | 3月31日22M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点地址">Top免费VPN推荐 | 3月31日22M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点地址</a></li>
+                        <li class="py-2"><a href="/news/article-86959.htm" title="feign实现微服务之间的远程调用">feign实现微服务之间的远程调用</a></li>
+                        <li class="py-2"><a href="/news/article-81474.htm" title="长春哪里宠物医院好不贵又便宜（长春哪里宠物医院好不贵又便宜点）">长春哪里宠物医院好不贵又便宜（长春哪里宠物医院好不贵又便宜点）</a></li>
+                        <li class="py-2"><a href="/news/article-86960.htm" title="昆明哪里可以免费领养宠物猫（昆明市宠物猫领养）">昆明哪里可以免费领养宠物猫（昆明市宠物猫领养）</a></li>
+                        <li class="py-2"><a href="/news/article-83365.htm" title="浅谈Vue3中watchEffect的具体用法_vue.js">浅谈Vue3中watchEffect的具体用法_vue.js</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer class="site-footer">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <div class="border-top">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Top免费VPN推荐 节点订阅中文网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery-3.3.1.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery-migrate-3.0.1.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery-ui.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/popper.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/bootstrap.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/owl.carousel.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery.stellar.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery.easing.1.3.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/aos.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery.fancybox.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery.sticky.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/main.js"></script>
+      <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+      <script src="/assets/website/js/frontend/G.js"></script>
+    </div> <!-- .site-wrap -->
+</body>
+
+</html>
