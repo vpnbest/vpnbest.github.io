@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://vpnbest.github.io/news/article-109081.htm" />
+    <title>Android7.0特性及适配</title>
+        <meta name="description" content="1、SharedPreferences废弃共享模式，详见 2、文件共享（拍照、截图、分享、安装等），禁用file://URL格式共享文件，即无法通过Uri.fromFile(File file)获取的" />
+        <link rel="icon" href="/assets/website/img/v2ray_node/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Top免费VPN推荐 节点订阅中文网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://vpnbest.github.io/news/article-109081.htm" />
+    <meta property="og:site_name" content="Top免费VPN推荐 节点订阅中文网" />
+    <meta property="og:title" content="Android7.0特性及适配" />
+    <meta property="og:image" content="https://vpnbest.github.io/uploads/20240810/ef0258d05bc7d0211f47300749f0816c.webp" />
+        <meta property="og:release_date" content="2025-05-01T09:04:09" />
+    <meta property="og:updated_time" content="2025-05-01T09:04:09" />
+        <meta property="og:description" content="1、SharedPreferences废弃共享模式，详见 2、文件共享（拍照、截图、分享、安装等），禁用file://URL格式共享文件，即无法通过Uri.fromFile(File file)获取的" />
+        
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Android7.0特性及适配">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/fonts/v2ray_node/icomoon/style.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/assets/website/fonts/v2ray_node/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/aos.css">
+    <link rel="stylesheet" href="/assets/website/css/v2ray_node/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6YFENCY5CN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6YFENCY5CN');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-page="detail">
+    <div class="site-wrap">
+            
+        <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+                <div class="site-mobile-menu-close mt-3">
+                    <span class="icon-close2 js-menu-toggle"></span>
+                </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+        </div>
+        <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-6 col-md-3">
+                        <a href="/" class="h2 mb-0">
+                                                <span class="mb-0 site-logo"><span>Top免费VPN推荐</span></span>
+                                                </a>
+                    </div>
+                    <div class="col-12 col-md-9 d-none d-xl-block">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                                                                <li><a href="/" class="nav-link">首页</a></li>
+                                                                <li><a href="/free-nodes/" class="nav-link">免费节点</a></li>
+                                                                <li><a href="/paid-subscribe/" class="nav-link">推荐机场</a></li>
+                                                                <li><a href="/news/" class="nav-link">新闻资讯</a></li>
+                                                                <li><a href="/client.htm" class="nav-link">客户端</a></li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+                </div>
+            </div>
+        </header>
+        <div class="site-blocks-cover inner-page-cover overlay" style="background-image: url(/assets/website/img/v2ray_node/hero_1.jpg);" data-aos="fade" id="home-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 mt-lg-5 mr-auto text-left align-self-end align-self-md-center">
+                        <h1>Android7.0特性及适配</h1>
+                        <p><a href="/">首页</a> <span class="mx-3">&bullet;</span> <a href="/news/">新闻资讯</a> <span class="mx-3">&bullet;</span> 正文</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="site-section" id="about-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="htmledit_views"> <p><strong>1、SharedPreferences废弃共享模式，详见</strong></p> <p><strong>2、文件共享</strong>（拍照、截图、分享、安装等），禁用file://URL格式共享文件，即无法通过Uri.fromFile(File file)获取的url进行文件共享，会发生FileUriExposedException，适配方案如下：</p> <p>（1）manifest中声明FilProvider</p> <pre><code>&lt;provider     android:name="androidx.core.content.FileProvider"     android:authorities="${applicationId}.fileProvider"     android:exported="false"     android:grantUriPermissions="true"&gt;     &lt;meta-data          android:name="android.support.FILE_PROVIDER_PATHS"          android:resource="@xml/provider_paths" /&gt; &lt;/provider&gt;</code></pre> <p>（2）res/xml/定义共享文件路径</p> <pre><code>&lt;?xml version="1.0" encoding="utf-8"?&gt; &lt;paths xmlns:android="http://schemas.android.com/apk/res/android"&gt;     &lt;files-path name="file" path=""/&gt; 	&lt;cache-path name="file" path=""/&gt;     &lt;external-path name="external" path=""/&gt;     &lt;external-files-path name="external-files" path=""/&gt; 	&lt;external-cache-path name="external-cache" path=""/&gt; &lt;/paths&gt;</code></pre> <p>注：<br /> a、files-path:内部存储空间应用私有目录下的files目录，等同Context.getFilesDis()路径<br /> b、cache-path:内部存储空间应用私有目录下的cache目录，等同Context.getCacheDir()路径<br /> c、external-path:外部存储空间根目录，等同Environment.getExternalStorageDirectory()路径<br /> d、external-files-path：外部存储空间应用私有目录下的files目录，等同Context.getExternalFilesDir()路径<br /> e、external-cache-path：外部存储空间应用私有目录下的cache目录，等同Context.getExternalCacheDir()路径<br /> f、name为自定义名称<br /> g、path为相应根目录下的子路径，为空表示所有子目录<br /> h、files-path、cache-path、external-path、external-files-path、external-cache-path同一类型可以包含多个</p> <p>（3）生成content://类型Uri</p> <p>FileProvider.getUriForFile(Context context, String authority, File file)</p> <p>（4）给Uri授予临时权限</p> <pre><code>intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)</code></pre> <p>（5）实例：</p> <pre><code>//拍照     private fun camera(){         val intent = Intent("android.media.action.IMAGE_CAPTURE")         val file = File(Environment.getExternalStorageDirectory(), "demo.png")         val uri = if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N){             FileProvider.getUriForFile(this, BuildConfig.APPLICATION_ID + ".fileProvider", file)         }else{             Uri.fromFile(file)         }         intent.putExtra(MediaStore.EXTRA_OUTPUT, uri)         startActivityForResult(intent, REQUEST_CODE_CAMERA)     }      //裁剪图片     private fun cropImage(fromFile: File, toFile: File, aspectX: Int, aspectY: Int, width: Int, height: Int){         val intent = Intent("com.android.camera.action.CROP")         val fromUri = if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N){             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)             FileProvider.getUriForFile(this, BuildConfig.APPLICATION_ID + ".fileProvider", fromFile)         }else{             Uri.fromFile(fromFile)         }         intent.setDataAndType(fromUri, "image/*")         intent.putExtra("crop", "true")         intent.putExtra("aspectX", aspectX)         intent.putExtra("aspectY", aspectY)         intent.putExtra("outputX", width)         intent.putExtra("outPutY", height)         intent.putExtra("scale", true)         val toUri = Uri.fromFile(toFile)         intent.putExtra(MediaStore.EXTRA_OUTPUT, toUri)         intent.putExtra("return-data", true)         startActivityForResult(intent, REQUEST_CODE_CROP)     }      //分享文件     private fun shareFiles(fileList: Array&lt;File&gt;){         val intent = Intent(Intent.ACTION_SEND_MULTIPLE)         val uriList = arrayListOf&lt;Uri&gt;()         if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N){             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)             fileList.forEach {                 val uri = FileProvider.getUriForFile(this, BuildConfig.APPLICATION_ID + ".fileProvider", it)                 grantUriPermission(packageName, uri, Intent.FLAG_GRANT_READ_URI_PERMISSION)                 uriList.add(uri)             }         }else{             fileList.forEach {                 uriList.add(Uri.fromFile(it))             }         }         intent.putExtra(Intent.EXTRA_STREAM, uriList)         intent.type = "*/*"         startActivityForResult(Intent.createChooser(intent, ""), REQUEST_CODE_SHARE_FILES)     }      private fun install(file: File){         val intent = Intent(Intent.ACTION_VIEW)         val uri = if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N){             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)             FileProvider.getUriForFile(this, BuildConfig.APPLICATION_ID + ".fileProvider", file)         }else{             Uri.fromFile(file)         }         intent.setDataAndType(uri, "application/vnd.android.package-archive")         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)         startActivityForResult(intent, REQUEST_CODE_INSTALL)     }</code></pre> <p>（6）其他方案，如下则仍可以使用Uri.fromFile(File file)共享文件（不建议）</p> <pre><code>//在Application的onCreat()方法中添加 if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.N) {     StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();     StrictMode.setVmPolicy(builder.build());     builder.detectFileUriExposure(); }</code></pre> <p><strong>3、系统广播限制</strong></p> <p>静态注册网络状态变更广播、拍照广播、录像广播无效，需要动态注册方式</p> <p><strong>4、支持使用V2签名</strong></p> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-108262.htm">动物防疫站给猫***免费吗多少钱一针（动物防疫站可以给宠物猫打疫苗么）</a></p>
+                                        <p>下一个：<a href="/news/article-109082.htm">开个小型宠物食品加工厂多少钱（宠物零食加工厂要投资多少）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-4-30-free-node-subscribe.htm" title="Top免费VPN推荐 | 4月30日19M/S|免费SSR/Shadowrocket/Clash/V2ray订阅节点地址">Top免费VPN推荐 | 4月30日19M/S|免费SSR/Shadowrocket/Clash/V2ray订阅节点地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-28-node-share-links.htm" title="Top免费VPN推荐 | 4月28日20.6M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点地址">Top免费VPN推荐 | 4月28日20.6M/S|免费SSR/V2ray/Clash/Shadowrocket订阅节点地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-2-clash-v2ray-ss-ssr.htm" title="Top免费VPN推荐 | 4月2日21.6M/S|免费V2ray/Clash/SSR/Shadowrocket订阅节点地址">Top免费VPN推荐 | 4月2日21.6M/S|免费V2ray/Clash/SSR/Shadowrocket订阅节点地址</a></li>
+                        <li class="py-2"><a href="/news/article-98706.htm" title="梦见抱着别人的女人是什么意思（梦里抱着别的女人）">梦见抱着别人的女人是什么意思（梦里抱着别的女人）</a></li>
+                        <li class="py-2"><a href="/news/article-95119.htm" title="pytorch报错  ConvTranspose1d object has no attribute padding_mode">pytorch报错  ConvTranspose1d object has no attribute padding_mode</a></li>
+                        <li class="py-2"><a href="/news/article-98061.htm" title="兽药十大品牌排行榜（兽药排行榜前三十名）">兽药十大品牌排行榜（兽药排行榜前三十名）</a></li>
+                        <li class="py-2"><a href="/news/article-102464.htm" title="JavaScript查找数组中的第一个冗余元素方法详解">JavaScript查找数组中的第一个冗余元素方法详解</a></li>
+                        <li class="py-2"><a href="/news/article-103305.htm" title="vue 修饰符">vue 修饰符</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-10-free-node-subscribe-links.htm" title="Top免费VPN推荐 | 4月10日19.1M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点地址">Top免费VPN推荐 | 4月10日19.1M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点地址</a></li>
+                        <li class="py-2"><a href="/news/article-89819.htm" title="动物医院诊疗许可证需要提供什么材料和手续呢（动物医院资质）">动物医院诊疗许可证需要提供什么材料和手续呢（动物医院资质）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+                <footer class="site-footer">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <div class="border-top">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Top免费VPN推荐 节点订阅中文网</a> 版权所有 Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery-3.3.1.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery-migrate-3.0.1.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery-ui.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/popper.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/bootstrap.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/owl.carousel.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery.stellar.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery.easing.1.3.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/aos.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery.fancybox.min.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/jquery.sticky.js"></script>
+      <script src="/assets/website/js/frontend/v2ray_node/main.js"></script>
+      <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+      <script src="/assets/website/js/frontend/G.js"></script>
+    </div> <!-- .site-wrap -->
+</body>
+
+</html>
